@@ -1,0 +1,1 @@
+docker run -it --user andrew --network=host --ipc=host -v /home/andrew/wsdev:/home/andrew/wsdev -v /tmp.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c *:* rmw' ros_hb_image

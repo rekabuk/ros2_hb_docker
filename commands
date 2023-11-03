@@ -1,0 +1,19 @@
+
+
+#build
+docker image build -t ros_image .
+
+#Run
+docker run -it --user andrew --network=host --ipc=host -v /home/andrew/wsdev:/home/andrew/wsdev -v /tmp.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY ros_image
+docker run -it --user andrew --network=host --ipc=host -v /home/andrew/wsdev:/home/andrew/wsdev -v /tmp.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c *:* rmw' ros_image 
+
+#Run a command
+docker exec -it {container_name} /bin/bash
+
+docker container stop {container_name} 
+ocker container ps
+docker container ps -a
+docker container start -i {container_name} 
+
+
+

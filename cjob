@@ -1,0 +1,2 @@
+@reboot              /usr/bin/chrt -r 99; /usr/local/bin/pigpiod
+
